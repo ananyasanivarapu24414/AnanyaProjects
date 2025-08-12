@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flyer Sharing App
 
-## Getting Started
+A modern web application for sharing and discovering community flyers, built with Next.js and React.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This application provides a digital platform for communities to share event flyers, announcements, and local information. Users can browse through a visually appealing masonry grid layout to discover community events and activities.
+
+## Features
+
+- **Community Board**: Browse flyers in an organized masonry grid layout
+- **User Authentication**: Secure login and registration system with Firebase
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Interactive UI**: Modern interface with smooth animations and transitions
+- **User Onboarding**: Guided setup process for new users
+- **Image Carousel**: Dynamic image display for featured content
+
+## Tech Stack
+
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Authentication**: Firebase Auth
+- **Database**: Firebase Firestore
+- **Deployment**: Vercel-ready configuration
+- **Development**: ESLint, PostCSS
+
+## Project Structure
+
+```
+flyer-app/
+├── src/app/
+│   ├── community-board/        # Main flyer browsing page
+│   ├── login-page/            # Authentication pages
+│   ├── onboarding/            # User setup flow
+│   ├── contexts/              # React Context providers
+│   └── utilities/             # Firebase configuration
+├── public/                    # Static assets
+└── package.json              # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **FlyerMasonryGrid**: Dynamic grid layout for displaying flyers
+- **FlyerCard**: Individual flyer display component
+- **AuthContext**: User authentication state management
+- **ImageCarousel**: Interactive image slideshow
+- **BuzzHeader**: Community board header component
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up Firebase configuration in `src/app/utilities/firebase/firebase.ts`
+4. Run development server: `npm run dev`
+5. Open http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## Firebase Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project requires Firebase configuration for authentication and data storage. Update the Firebase config file with your project credentials.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Development Features
 
-## Deploy on Vercel
+- Hot reloading for rapid development
+- TypeScript for type safety
+- ESLint for code quality
+- Responsive design with Tailwind CSS
+- Docker support for containerized deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Enhancements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Real-time flyer updates
+- Advanced search and filtering
+- User profiles and flyer management
+- Push notifications for new events
+- Integration with calendar applications
+
+## Contributing
+
+Feel free to submit issues and pull requests to help improve this project.
